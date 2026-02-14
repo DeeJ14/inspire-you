@@ -194,3 +194,38 @@ footer {
     margin: 0 10px;
     font-size: 1.5rem;
 }
+
+/* =========================================
+   5. Profile Image Fix (プロフィール画像設定)
+   ========================================= */
+.profile-image-container {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;         /* 枠からはみ出た部分を隠す */
+    margin: 0 auto;           /* 中央寄せ */
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.profile-img-main {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: top;          /* 写真の「上端」を基準に枠に合わせる */
+    
+    transform: scale(1.0);        /* 15%拡大して左右の切れ目を隠す */
+    transform-origin: top center;  /* ★重要：拡大の起点を「上・中央」に固定（これで頭が切れません） */
+    
+    /* 余計な設定をリセット */
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* スマホの時の調整 */
+@media (max-width: 768px) {
+    .profile-image-container {
+        width: 250px;
+        height: 250px;
+    }
+}
