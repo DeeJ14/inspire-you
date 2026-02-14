@@ -200,7 +200,7 @@ footer {
    ========================================= */
 .profile-image-container {
     width: 300px;
-    height: 300px;
+    height: 350px;
     border-radius: 50%;
     overflow: hidden;         /* 枠からはみ出た部分を隠す */
     margin: 0 auto;           /* 中央寄せ */
