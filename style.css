@@ -88,7 +88,13 @@ a { text-decoration: none; }
     position: relative;
     z-index: 1;
 }
-
+/* ヘッダーの文字を少し縦長にする */
+.main-slogan {
+    /* 文字を縦長にする設定 */
+    transform: scale(1, 1.2); /* 横はそのまま、縦を1.2倍に */
+    display: inline-block;    /* transformを効かせるために必要 */
+    transform-origin: left;   /* 左を起点に拡大 */
+}
 /* =========================================
    4. Sections & Components
    ========================================= */
@@ -201,7 +207,7 @@ footer {
 .profile-image-container {
     width: 300px;
     height: 350px;
-    border-radius: 50%;
+    border-radius: 1.5rem;
     overflow: hidden;         /* 枠からはみ出た部分を隠す */
     margin: 0 auto;           /* 中央寄せ */
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
